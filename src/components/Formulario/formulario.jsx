@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box, Button, Checkbox, Container, FormControlLabel, Grid, Link, TextField, Typography } from '@mui/material';
 
-function Formulario() {
+function Formulario(props) {
   return (
     <>
     <Container component="main" maxWidth="xs">
@@ -13,7 +13,7 @@ function Formulario() {
     }}
     >
         <Typography component="h2" variant="h5">
-            Formulário de login
+            {props.titulo}
         </Typography>
         <Box component="form" sx={{ mt:1 }}>
             <TextField fullWidth margin="normal" label="Email" name="email" variant="filled" />
@@ -22,7 +22,7 @@ function Formulario() {
             control={<Checkbox value="remember" color="primary"/>} 
             label="Lembrar-me"
             />
-            <Button fullWidth type="submit" variant="contained" sx={{ mt: 4 , mb: 2}}>Login</Button>
+            <Button fullWidth type="submit" variant="contained" sx={{ mt: 4 , mb: 2}} color="error">Login</Button>
             <Grid container>
                 <Grid item xs>
                     <Link href="#">Esqueci minha Senha</Link>
